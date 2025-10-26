@@ -4,4 +4,6 @@ from .views import Index
 
 urlpatterns = [
     path("/test", Index.as_view(), name="index")
+    path('payments/initiate/', InitiatePaymentView.as_view(), name='initiate-payment'),
+    path('payments/verify/', VerifyPaymentView.as_view(), name='verify-payment'),
 ]
